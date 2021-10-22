@@ -7,9 +7,9 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const newData = EmojiArr.filter((emoji) =>
-      emoji.title.toLowerCase().includes(search.toLowerCase())
-    );
+    const newData = EmojiArr.filter((emoji) => {
+      return emoji.title.toLowerCase().includes(search.toLowerCase());
+    });
     setData(newData);
   }, [search]);
 
